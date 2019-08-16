@@ -3,10 +3,10 @@ Use this calculator to find the Maturity Date, Interest Earned, Interest Rate, a
 Works for all Bond Series(EE, I, E, Savings Notes) and Denominations($10-$10,000)
 
 # Dependencies:
-tkinter
-pandas
-requests
-bs4
+tkinter,
+pandas,
+requests,
+bs4,
 tqdm
 
 # Step 1:
