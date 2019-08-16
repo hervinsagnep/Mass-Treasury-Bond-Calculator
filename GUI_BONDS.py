@@ -4,6 +4,8 @@ import pandas as pd
 import requests
 import bs4
 from tqdm import tqdm
+import datetime
+x = datetime.datetime.now()
 root = tk.Tk()
 root.title("Treasury Bond")
 def get_path():
@@ -18,7 +20,7 @@ while i != len(bond_df):
         loop.set_description("Loading")
         loop.update(1)
         URL = 'https://www.treasurydirect.gov/BC/SBCPrice'  # Treasury Website
-        payload = {"RedemptionDate": "08/2019",  # Parameters
+        payload = {"RedemptionDate": f"{str(x.strftime('%m'))}/{str(x.year)}",  # Parameters
                    "btnUpdate.x": "UPDATE",
                    "Series": str(row["Series"]),
                    "Denomination": str(row["Denomination"]),
